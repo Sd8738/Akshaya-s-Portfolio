@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Instrumentation & Art</title>
+    <meta name="description" content="Portfolio of an Instrumentation & Control Engineer with a passion for artistic expression.">
+    <meta name="keywords" content="Portfolio, Engineering, Instrumentation, Art, Mandala, Automation">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            /* Fresh, Nature-inspired Palette - No Pure Black */
+            --primary-color: #2A9D8F; /* Teal/Fresh Green */
+            --primary-light: #E0F5F3; /* Very Light Teal */
+            --secondary-color: #E9C46A; /* Warm Accent */
+            --bg-color: #F8F9FA; /* Off-white/Light Grey background */
+            --text-main: #264653; /* Deep Blue-Grey (Instead of Black) */
+            --text-muted: #5F7D8B; /* Softer Blue-Grey */
+            --card-bg: #FFFFFF;
+        }
+    }
+
+    @layer base {
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+    }
+
+    @layer components {
+        .container-custom {
+            @apply max-w-5xl mx-auto px-6;
+        }
+        .section-padding {
+            @apply py-20;
+        }
+        .card {
+            @apply bg-[var(--card-bg)] rounded-2xl p-8 shadow-sm transition-all duration-300 hover:shadow-md border border-slate-100;
+        }
+        .btn-primary {
+            @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-[var(--primary-color)] text-white font-medium transition-transform hover:-translate-y-1 hover:shadow-lg;
+        }
+        .btn-outline {
+            @apply inline-flex items-center justify-center px-6 py-3 rounded-full border-2 border-[var(--text-main)] text-[var(--text-main)] font-medium transition-colors hover:bg-[var(--text-main)] hover:text-white;
+        }
+    }
+    
+    /* Animation Utilities */
+    .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Component Scripts -->
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/About.js"></script>
+    <script type="text/babel" src="components/Education.js"></script>
+    <script type="text/babel" src="components/Skills.js"></script>
+    <script type="text/babel" src="components/Certifications.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
